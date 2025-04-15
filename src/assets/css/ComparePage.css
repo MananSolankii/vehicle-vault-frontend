@@ -1,0 +1,265 @@
+/** =============================
+   ComparePage.css - Premium UI (Updated)
+============================= */
+
+/* ===== BACKGROUND ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background: url('src/assets/images/compare-bg.jpg') no-repeat center center fixed; */
+  background-size: cover;
+  position: relative;
+}
+
+/* ===== SECTION ===== */
+.comparison-section {
+  padding: 100px 20px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.comparison-section h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.comparison-section .tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.comparison-section p {
+  font-size: 1.05rem;
+  color: #f1f1f1;
+  margin-bottom: 40px;
+}
+
+/* ===== CAR SELECTION ===== */
+.car-selection {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.car-box {
+  width: 240px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: none;
+}
+
+.car-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+}
+
+.selected-car {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* ✅ Shows full image without cropping */
+  border-radius: 20px;
+  display: block;
+  background-color: #fff; /* Optional: adds background behind images */
+}
+
+
+
+.remove-car-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 0, 0, 0.9);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 4px 8px;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  transition: background 0.2s ease;
+}
+
+.remove-car-button:hover {
+  background: #ff1f1f;
+}
+
+.car-box span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ===== TRANSPARENT DROPDOWN ===== */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+  color: #fff;
+}
+
+.dropdown-header {
+  padding: 12px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.05);
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #00c6ff;
+}
+
+.dropdown-back {
+  padding: 10px 16px;
+  cursor: pointer;
+  color: #00c6ff;
+  font-weight: bold;
+}
+
+/* ===== BUTTON ===== */
+.compare-button {
+  margin-top: 40px;
+}
+
+.compare-button button {
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.compare-button button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.compare-button button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ===== TABLE ===== */
+.compare-table {
+  margin-top: 60px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.compare-table table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.compare-table th {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.compare-table tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+.compare-table td:first-child {
+  font-weight: 600;
+  text-align: left;
+}
+
+.compare-table h2 {
+  text-align: left;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.boolean-true {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.boolean-false {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .comparison-section h1 {
+    font-size: 2.2rem;
+  }
+  .car-box {
+    width: 90%;
+    max-width: 300px;
+  }
+  .compare-table table {
+    font-size: 0.85rem;
+  }
+}
+.homepage{
+  
+  background: url('src/assets/images/compare-bg.jpg') no-repeat center center fixed;
+  
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+    z-index: 0;
+  
+  
+}
+
